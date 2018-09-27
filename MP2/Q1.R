@@ -76,7 +76,7 @@ boxplot(b.maine.time, b.away.time, names=c("Maine runners","Away runners") , mai
 # Creating subset of values on Column Sex
 b.male = subset(roadrace, roadrace$Sex=="M")
 b.female = subset(roadrace, roadrace$Sex=="F")
-boxplot(b.male$Age, b.female$Age, main="Age of Male and Female")
+boxplot(b.male$Age, b.female$Age, names= c("Male Runners","Female runners"),main="Boxplot for age of runners")
 
 # Five Number summary
 (b.male.age.summary = summary(b.male$Age))
