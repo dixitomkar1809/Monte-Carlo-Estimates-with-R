@@ -66,7 +66,7 @@ b.away.time.q3 = b.away.time.summary[5]
 
 # Question 1(c)
 par(mfrow=c(1,1))
-boxplot(b.maine.time, b.away.time,  main="Running Time (Maine and Away)")
+boxplot(b.maine.time, b.away.time, names=c("Maine runners","Away runners") , main="Boxplot for Running Time")
 #boxplot(b.maine.time,  main="Running Time (Maine)")
 #boxplot(b.away.time, main="Running Time (Away)")
 (b.maine.time.outliers = subset(b.maine, ((b.maine$Time..minutes. < (b.maine.time.q1 - 1.5 * b.maine.time.iqr)  ) | (b.maine$Time..minutes. > (b.maine.time.q3 + 1.5 * b.maine.time.iqr)))))
