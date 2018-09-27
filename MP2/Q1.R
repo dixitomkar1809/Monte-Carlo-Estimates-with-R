@@ -65,6 +65,7 @@ b.away.time.q3 = b.away.time.summary[5]
 (b.away.time.iqr = IQR(b.away.time))
 
 # Question 1(c)
+par(mfrow=c(1,1))
 boxplot(b.maine.time, b.away.time,  main="Running Time (Maine and Away)")
 #boxplot(b.maine.time,  main="Running Time (Maine)")
 #boxplot(b.away.time, main="Running Time (Away)")
