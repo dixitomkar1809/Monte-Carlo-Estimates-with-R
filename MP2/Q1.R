@@ -21,8 +21,18 @@ b.maine.time = b.maine$Time..minutes.
 b.away.time = b.away$Time..minutes.
 
 # Plotting Histograms
-hist(b.maine.time, main = "Question 1(b)", xlab = "Running Time (Maine)", ylim = c(0,2000), col=rgb(0.1,0.1,0.1,0.5))
-hist(b.away.time, main = "Question 1(b)", xlab = "Running Time (Away)", ylim=c(0,2000), add=T,  col=rgb(0.8,0.8,0.8,0.5))
+
+#overlapping Histograms
+par(mfrow=c(1,1))
+hist(b.maine.time, main = "Question 1(b)", xlab = "Running Times Dark Gray: Maine, Light Gray: Away  ", ylim = c(0,2000), col=rgb(0.1,0.1,0.1,0.5))
+hist(b.away.time, main = "Question 1(b) ",xlab = "Running Times", ylim=c(0,2000), add=T,  col=rgb(0.8,0.8,0.8,0.5))
+box()
+
+#side by side histograms
+par(mfrow=c(1,2))
+hist(b.away.time, main = "Runners from Other Places",xlim=c(20,120),ylim=c(0,2000), xlab = "Running Time(in mins)")
+box()
+hist(b.maine.time, main = "Runners from Maine" ,xlim=c(20,120),ylim=c(0,2000), xlab = "Running Time(in mins)")
 box()
 
 
